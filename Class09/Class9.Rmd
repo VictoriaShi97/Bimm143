@@ -2,7 +2,7 @@
 title: 'Class9: Unsupervised Learning Mini-Project'
 author: "Victoria Shi"
 date: "4/30/2019"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
