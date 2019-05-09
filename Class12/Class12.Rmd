@@ -1,0 +1,59 @@
+---
+title: "Class12"
+author: "Victoria Shi"
+date: "5/9/2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Set up for Docking
+
+We will first prepare our HIV-Pr system for drug docking by making a protein only PDB format file (i.e. we will remove water, ligand, etc.)
+
+```{r}
+library(bio3d)
+```
+
+```{r}
+file.name <-get.pdb("1hsg")
+```
+
+```{r}
+hiv<-read.pdb("1hsg")
+```
+
+
+```{r}
+hiv
+```
+
+## Prepare initial protein and ligand input files
+```{r}
+prot<-trim.pdb(hiv,"protein")
+lig<-trim.pdb(hiv,"ligand")
+```
+
+```{r}
+write.pdb(prot,file="1hsg_protein.pdb")
+write.pdb(lig,file="1hsg_ligand.pdb")
+```
+
+## Inspecting your docking results
+```{r}
+library(bio3d)
+res<-read.pdb("all.pdbqt", multi=TRUE)
+write.pdb(res, "results.pdb")
+```
+
+
+## Normal Mode analysis for flexibility prediction
+
+```{r}
+pdb <- read.pdb("1hel")
+modes <- nma( pdb )
+m7 <- mktrj(modes, mode=7, file="mode_7.pdb")
+```
+
