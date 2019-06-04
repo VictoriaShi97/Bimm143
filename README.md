@@ -6,7 +6,7 @@ This is my classwork from [BIMM 143 Spring 2019](https://bioboot.github.io/bimm1
 
 Introductory Material: Working with R
 
-- Class 05: [R basics, data structures and data input](https://github.com/VictoriaShi97/Bimm143/blob/master/Class05/R_script.html) 
+- Class 05: [R basics, data structures and data input](https://github.com/VictoriaShi97/Bimm143/blob/master/Class05/R%20script.R) 
 
 - Class 06: [R graphics, generating plots with R](https://github.com/VictoriaShi97/bimm143/blob/master/Class06/Class_6.md)
 
